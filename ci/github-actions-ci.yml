@@ -1,0 +1,57 @@
+# GitHub Actions 工作流配置原文（四组合矩阵）
+#
+# 启用方式（把下面的文件放到 Actions 认识的位置）：
+#   mkdir -p .github/workflows && cp ci/github-actions-ci.yml .github/workflows/ci.yml
+#
+# 为什么放在 ci/ 而不是 .github/workflows/：
+#   本仓库的发布通道是 GitHub Contents / Git Data API，所用 token 不含 workflow scope，
+#   GitHub 对 .github/workflows/* 的写入会静默返回 404。为保证「文档里写的路径」和
+#   「仓库里真实存在的文件」始终一致（这正是 DEK 要抓的那类不一致），配置以 ci/ 路径发布。
+#
+name: dek-ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: py${{ matrix.python }} @ ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, macos-latest ]
+        python: [ "3.9", "3.12" ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python ${{ matrix.python }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: 零依赖自检（45 项 unittest）
+        run: python3 -m unittest discover -s tests -v
+
+      - name: 正向核验 —— demo 必须 PASS
+        run: |
+          set -o pipefail
+          python3 -m dek verify --root examples/demo --manifest dek.json
+          echo "demo verify exit=$?"
+
+      - name: 负向核验 —— 回归用例必须 FAIL(1)
+        run: |
+          set +e
+          python3 -m dek verify --root examples/regression_c6a --manifest dek.json
+          rc=$?
+          echo "regression verify exit=$rc"
+          if [ "$rc" -ne 1 ]; then
+            echo "::error::回归用例必须返回 1；返回 $rc 说明核验器在无差别放行，工具不可信"
+            exit 1
+          fi
+
+      - name: 自身交付核验 —— 本仓库 dek.json 必须 PASS
+        run: python3 -m dek verify --root . --manifest dek.json
