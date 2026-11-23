@@ -27,6 +27,17 @@ python3 -m unittest discover -s tests -v   # 45 项自检
 
 不需要 `pip install`。直接在仓库根运行 `python3 -m dek`。
 
+## CI（四组合矩阵）
+
+配置原文在 `ci/github-actions-ci.yml`：ubuntu-latest / macos-latest × Python 3.9 / 3.12，跑三件事——45 项 unittest、demo 正向核验（必须 PASS）、回归负向核验（**必须返回 1**，返回 0 即判定工具在无差别放行）。
+
+```bash
+mkdir -p .github/workflows && cp ci/github-actions-ci.yml .github/workflows/ci.yml
+```
+
+> 为什么放 `ci/`：本仓库通过 GitHub Contents / Git Data API 发布，所用 token 不含 `workflow` scope，对 `.github/workflows/*` 的写入会被静默拒绝（404）。放在 `ci/` 只有一处真相——文档写的路径与仓库里的文件永远对得上，这正是 DEK 自己要抓的那类不一致。
+> 该工作流**尚未在 GitHub 上真实跑过**，首次启用后的构建结果需自行确认，不要把这份配置当成「CI 已绿」的证据。
+
 ## 三条命令
 
 ```bash
