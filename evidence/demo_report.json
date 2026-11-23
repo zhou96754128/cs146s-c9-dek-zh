@@ -1,0 +1,141 @@
+{
+  "project": "demo-delivery",
+  "root": "/Users/xiaowo/.cogseed-dev/userWorkSpace/检查挑战清单完成情况/C9/Zhouruoying_C9_dek/examples/demo",
+  "verdict": "PASS",
+  "summary": {
+    "total": 12,
+    "pass": 12,
+    "fail": 0,
+    "skip": 0,
+    "claims": 7,
+    "deliverables": 3,
+    "repro": 2
+  },
+  "claims": [
+    {
+      "id": "报告条目数",
+      "kind": "json",
+      "source": "summary.json",
+      "expected": 12,
+      "note": "文档里写 12，就必须等于 summary.json 里的 12",
+      "status": "PASS",
+      "actual": 12,
+      "detail": ""
+    },
+    {
+      "id": "通过率",
+      "kind": "json",
+      "source": "summary.json",
+      "expected": 0.9167,
+      "note": "浮点允许容差",
+      "status": "PASS",
+      "actual": 0.9167,
+      "detail": ""
+    },
+    {
+      "id": "proposal 字节数",
+      "kind": "file_size",
+      "source": "Zhouruoying_demo_proposal.md",
+      "expected": 573,
+      "note": "",
+      "status": "PASS",
+      "actual": 573,
+      "detail": ""
+    },
+    {
+      "id": "summary 字节数",
+      "kind": "file_size",
+      "source": "summary.json",
+      "expected": 290,
+      "note": "",
+      "status": "PASS",
+      "actual": 290,
+      "detail": ""
+    },
+    {
+      "id": "proposal 含一句话定义",
+      "kind": "contains",
+      "source": "Zhouruoying_demo_proposal.md",
+      "expected": "一句话定义",
+      "note": "",
+      "status": "PASS",
+      "actual": true,
+      "detail": ""
+    },
+    {
+      "id": "proposal 不含占位符",
+      "kind": "not_contains",
+      "source": "Zhouruoying_demo_proposal.md",
+      "expected": "TODO",
+      "note": "",
+      "status": "PASS",
+      "actual": true,
+      "detail": ""
+    },
+    {
+      "id": "AI日志行数",
+      "kind": "line_count",
+      "source": "Zhouruoying_demo_AI日志.md",
+      "expected": 19,
+      "note": "",
+      "status": "PASS",
+      "actual": 19,
+      "detail": ""
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "*proposal*",
+      "pattern": "*proposal*",
+      "required": true,
+      "matched": [
+        "Zhouruoying_demo_proposal.md"
+      ],
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "*AI日志*",
+      "pattern": "*AI日志*",
+      "required": true,
+      "matched": [
+        "Zhouruoying_demo_AI日志.md"
+      ],
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "*demo*",
+      "pattern": "*demo*",
+      "required": false,
+      "matched": [
+        "Zhouruoying_demo_AI日志.md",
+        "Zhouruoying_demo_proposal.md"
+      ],
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "repro": [
+    {
+      "id": "示例自检",
+      "cmd": "python3 -c \"import json;d=json.load(open('summary.json'));assert d['run']['n_items']==12;print('OK 12 items')\"",
+      "status": "PASS",
+      "detail": "",
+      "exit": 0,
+      "stdout": "OK 12 items\n",
+      "stderr": "",
+      "timeout": 300
+    },
+    {
+      "id": "示例负向验证",
+      "cmd": "python3 -c \"import sys;sys.exit(3)\"",
+      "status": "PASS",
+      "detail": "",
+      "exit": 3,
+      "stdout": "",
+      "stderr": "",
+      "timeout": 300
+    }
+  ]
+}
