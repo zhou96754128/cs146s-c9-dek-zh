@@ -1,0 +1,4 @@
+FAIL claim  截图字节数（历史错误值） 期望 226315，实际 523426
+PASS claim  截图 sha256 前缀
+
+VERDICT=FAIL  total=2  pass=1  fail=1  skip=0
