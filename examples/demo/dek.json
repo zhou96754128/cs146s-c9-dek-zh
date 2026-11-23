@@ -1,0 +1,71 @@
+{
+  "project": "demo-delivery",
+  "claims": [
+    {
+      "id": "报告条目数",
+      "kind": "json",
+      "source": "summary.json",
+      "pointer": "run.n_items",
+      "value": 12,
+      "note": "文档里写 12，就必须等于 summary.json 里的 12"
+    },
+    {
+      "id": "通过率",
+      "kind": "json",
+      "source": "summary.json",
+      "pointer": "run.pass_rate",
+      "value": 0.9167,
+      "tolerance": 0.0002,
+      "note": "浮点允许容差"
+    },
+    {
+      "id": "proposal 字节数",
+      "kind": "file_size",
+      "source": "Zhouruoying_demo_proposal.md",
+      "value": 573
+    },
+    {
+      "id": "summary 字节数",
+      "kind": "file_size",
+      "source": "summary.json",
+      "value": 290
+    },
+    {
+      "id": "proposal 含一句话定义",
+      "kind": "contains",
+      "source": "Zhouruoying_demo_proposal.md",
+      "value": "一句话定义"
+    },
+    {
+      "id": "proposal 不含占位符",
+      "kind": "not_contains",
+      "source": "Zhouruoying_demo_proposal.md",
+      "value": "TODO"
+    },
+    {
+      "id": "AI日志行数",
+      "kind": "line_count",
+      "source": "Zhouruoying_demo_AI日志.md",
+      "value": 19
+    }
+  ],
+  "deliverables": [
+    { "pattern": "*proposal*", "required": true },
+    { "pattern": "*AI日志*", "required": true },
+    { "pattern": "*demo*", "required": false }
+  ],
+  "repro": [
+    {
+      "id": "示例自检",
+      "cmd": "python3 -c \"import json;d=json.load(open('summary.json'));assert d['run']['n_items']==12;print('OK 12 items')\"",
+      "expect_exit": 0,
+      "expect_stdout": "OK 12 items"
+    },
+    {
+      "id": "示例负向验证",
+      "cmd": "python3 -c \"import sys;sys.exit(3)\"",
+      "expect_exit": 3,
+      "note": "负向断言：确认非零退出码能被正确识别"
+    }
+  ]
+}
