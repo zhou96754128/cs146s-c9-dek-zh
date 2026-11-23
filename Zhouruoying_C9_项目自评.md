@@ -41,7 +41,7 @@
 | demo | `VERDICT=PASS total=12 pass=12 fail=0`，`DEMO_RC=0` |
 | 回归 | `VERDICT=FAIL total=2 pass=1 fail=1`，`REGRESSION_RC=1`（**故意失败**） |
 | 自身核验 | 本仓库 `dek.json` → `VERDICT=PASS total=24 pass=24 fail=0`，`SELF_VERIFY_RC=0` |
-| CI | GitHub Actions，ubuntu + macOS × Python 3.9 + 3.12 四组合 |
+| CI | GitHub Actions 四组合（ubuntu + macOS × Python 3.9 + 3.12），配置原文随仓库在 `ci/github-actions-ci.yml`；发布通道无 `workflow` 权限，需一行命令启用，尚未真实跑过 |
 
 **关键设计：回归用例是永远失败的。** 一个只会 PASS 的核验工具没有价值——它无法区分「东西真的对」和「它根本没在查」。CI 里把「回归必须返回 1」写成硬断言，返回 0 就判定工具在无差别放行。
 
