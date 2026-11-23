@@ -1,0 +1,33 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>DEK 交付核验报告 · demo-delivery</title><style>
+:root{--bg:#0f1115;--panel:#171a21;--line:#262b36;--fg:#e6e9ef;--dim:#9aa4b2;
+--ok:#3ecf8e;--bad:#ff6b6b;--skip:#c9a227}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:14px/1.6 -apple-system,"PingFang SC","Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:22px;margin:0 0 4px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:20px;word-break:break-all}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.kpi .n{font-size:24px;font-weight:600}
+.kpi .l{color:var(--dim);font-size:12px;margin-top:2px}
+.verdict{border-radius:10px;padding:12px 14px;margin-bottom:22px;font-weight:600}
+.verdict.pass{background:rgba(62,207,142,.12);border:1px solid var(--ok);color:var(--ok)}
+.verdict.fail{background:rgba(255,107,107,.12);border:1px solid var(--bad);color:var(--bad)}
+h2{font-size:15px;margin:26px 0 10px;color:var(--dim);text-transform:none;letter-spacing:.02em}
+table{width:100%;border-collapse:collapse;background:var(--panel);
+border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);
+vertical-align:top;font-size:13px}
+th{color:var(--dim);font-weight:500;background:#141821}
+tr:last-child td{border-bottom:none}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#c8d3e0}
+.pass{color:var(--ok)} .fail{color:var(--bad)} .skip{color:var(--skip)}
+.tag{font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid currentColor}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px;word-break:break-all;color:#c8d3e0}
+.detail{color:var(--dim);font-size:12px;margin-top:3px}
+pre{background:#0b0d11;border:1px solid var(--line);border-radius:8px;padding:10px;
+overflow:auto;font-size:12px;max-height:260px}
+footer{margin-top:32px;color:var(--dim);font-size:12px}
+</style></head><body><div class='wrap'><h1>DEK 交付核验报告</h1><div class='sub'>project=demo-delivery · root=/Users/xiaowo/.cogseed-dev/userWorkSpace/检查挑战清单完成情况/C9/Zhouruoying_C9_dek/examples/demo</div><div class='kpis'><div class='kpi'><div class='n' style='color:var(--fg)'>12</div><div class='l'>断言总数</div></div><div class='kpi'><div class='n' style='color:var(--ok)'>12</div><div class='l'>PASS</div></div><div class='kpi'><div class='n' style='color:var(--bad)'>0</div><div class='l'>FAIL</div></div><div class='kpi'><div class='n' style='color:var(--dim)'>0</div><div class='l'>SKIP</div></div></div><div class='verdict pass'>VERDICT = PASS</div><h2>① claim · 数字与来源一致（7）</h2><table><thead><tr><th>断言</th><th>类型</th><th>来源</th><th>期望</th><th>实际</th><th>结果</th></tr></thead><tbody><tr><td><code>报告条目数</code></td><td><code>json</code></td><td><code>summary.json</code></td><td><code>12</code></td><td><code>12</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>通过率</code></td><td><code>json</code></td><td><code>summary.json</code></td><td><code>0.9167</code></td><td><code>0.9167</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>proposal 字节数</code></td><td><code>file_size</code></td><td><code>Zhouruoying_demo_proposal.md</code></td><td><code>573</code></td><td><code>573</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>summary 字节数</code></td><td><code>file_size</code></td><td><code>summary.json</code></td><td><code>290</code></td><td><code>290</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>proposal 含一句话定义</code></td><td><code>contains</code></td><td><code>Zhouruoying_demo_proposal.md</code></td><td><code>&quot;一句话定义&quot;</code></td><td><code>true</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>proposal 不含占位符</code></td><td><code>not_contains</code></td><td><code>Zhouruoying_demo_proposal.md</code></td><td><code>&quot;TODO&quot;</code></td><td><code>true</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>AI日志行数</code></td><td><code>line_count</code></td><td><code>Zhouruoying_demo_AI日志.md</code></td><td><code>19</code></td><td><code>19</code></td><td><span class="tag pass">PASS</span></td></tr></tbody></table><h2>② deliverable · 必交物按文件名通配命中（3）</h2><table><thead><tr><th>通配符</th><th>要求</th><th>命中文件</th><th>结果</th></tr></thead><tbody><tr><td><code>*proposal*</code></td><td>必须</td><td><code>Zhouruoying_demo_proposal.md</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>*AI日志*</code></td><td>必须</td><td><code>Zhouruoying_demo_AI日志.md</code></td><td><span class="tag pass">PASS</span></td></tr><tr><td><code>*demo*</code></td><td>可选</td><td><code>Zhouruoying_demo_AI日志.md</code><br><code>Zhouruoying_demo_proposal.md</code></td><td><span class="tag pass">PASS</span></td></tr></tbody></table><h2>③ repro · 复现命令真跑（2）</h2><table><thead><tr><th>断言</th><th>命令</th><th>退出码</th><th>结果</th></tr></thead><tbody><tr><td><code>示例自检</code></td><td><code>python3 -c &quot;import json;d=json.load(open(&#x27;summary.json&#x27;));assert d[&#x27;run&#x27;][&#x27;n_items&#x27;]==12;print(&#x27;OK 12 items&#x27;)&quot;</code></td><td>0</td><td><span class="tag pass">PASS</span><pre>OK 12 items
+</pre></td></tr><tr><td><code>示例负向验证</code></td><td><code>python3 -c &quot;import sys;sys.exit(3)&quot;</code></td><td>3</td><td><span class="tag pass">PASS</span></td></tr></tbody></table><footer>由 DEK（Delivery Evidence Kit）生成 · 断言 12 条 · 失败 0 条 · 报告中不包含任何人工填写的结果</footer></div></body></html>
