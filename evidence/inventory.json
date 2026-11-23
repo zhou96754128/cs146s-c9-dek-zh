@@ -1,7 +1,7 @@
 {
   "root": "/Users/xiaowo/.cogseed-dev/userWorkSpace/检查挑战清单完成情况/C9/Zhouruoying_C9_dek",
   "count": 33,
-  "bytes": 629115,
+  "bytes": 631043,
   "items": [
     {
       "path": ".gitignore",
@@ -15,8 +15,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4433,
-      "sha256": "4ab959f8d01d6e7fdb466270694a54a96bce2f3e6a75e52d8ed4560740973c57"
+      "bytes": 5301,
+      "sha256": "49074b5c0d87da0c6aa643cf3c660038c2dcc5bc4f2338f87f1d6ac7786a6681"
     },
     {
       "path": "Zhouruoying_C9_AAR_W1.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "Zhouruoying_C9_mvp.md",
-      "bytes": 2735,
-      "sha256": "4552389bbd0255ef8879755bec3bf36089c3a7ca7cc553b0dfa426df048d990b"
+      "bytes": 2884,
+      "sha256": "712896f101531d34193b3253381e220934672a71c44b3dfc3f5b533ed72b8f05"
     },
     {
       "path": "Zhouruoying_C9_proposal.md",
@@ -45,8 +45,8 @@
     },
     {
       "path": "Zhouruoying_C9_项目自评.md",
-      "bytes": 4487,
-      "sha256": "f56b2621c1f995467aefaeda2cb6a8a6fbcd3ea7500ed2928f010c7ebbca0487"
+      "bytes": 4625,
+      "sha256": "69f4953308ef721b703da6a9d1aea1091027d2c4d89572843e2a4527f4460a30"
     },
     {
       "path": "dek.json",
@@ -59,9 +59,9 @@
       "sha256": "901de1f735fe431139dbc331b5f1078e9307802ea5cf50d5c2888fda44300785"
     },
     {
-      "path": ".github/workflows/ci.yml",
-      "bytes": 1375,
-      "sha256": "976f9829ffd54431f137249d809264485858c6a327ea68775883ca33d7632dd7"
+      "path": "ci/github-actions-ci.yml",
+      "bytes": 1992,
+      "sha256": "935505a65b1fca42a41e7009881637424dce70f1bd8cbb66b2f0c7275a31a2ae"
     },
     {
       "path": "dek/__init__.py",
@@ -110,8 +110,8 @@
     },
     {
       "path": "evidence/inventory.json",
-      "bytes": 5175,
-      "sha256": "5df34dfb638ea651428e9b7fb1f6f56813b3dea03c3a4657cc55abb006045c16"
+      "bytes": 5331,
+      "sha256": "13fb264ffd801a94a4c4debf027f3bc2d8b6d1d835698e5db16926bcf723aa1e"
     },
     {
       "path": "evidence/inventory.log",
