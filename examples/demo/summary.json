@@ -1,0 +1,13 @@
+{
+  "project": "demo-delivery",
+  "run": {
+    "n_items": 12,
+    "n_pass": 11,
+    "pass_rate": 0.9167,
+    "elapsed_sec": 3.42
+  },
+  "artifacts": [
+    { "name": "proposal", "path": "Zhouruoying_demo_proposal.md" },
+    { "name": "ai-log", "path": "Zhouruoying_demo_AI日志.md" }
+  ]
+}
