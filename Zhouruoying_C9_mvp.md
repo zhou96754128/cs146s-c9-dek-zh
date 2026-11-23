@@ -77,6 +77,6 @@ python3 -m dek verify --root . --manifest dek.json
 |---|---|
 | `evidence/demo_verify.log` | demo 正向核验原始输出 |
 | `evidence/regression_verify.log` | 回归负向核验原始输出 |
-| `evidence/inventory.json` | 仓库文件指纹清单（32 项） |
+| `evidence/inventory.json` | 仓库文件指纹清单（33 项，含本清单自身） |
 | `evidence/demo_report.json` / `.html` | 核验报告 JSON 与离线渲染页 |
-| `.github/workflows/ci.yml` | ubuntu + macOS × Python 3.9/3.12 四组合，含「回归必须返回 1」硬断言 |
+| `ci/github-actions-ci.yml` | ubuntu + macOS × Python 3.9/3.12 四组合，含「回归必须返回 1」硬断言；发布通道 token 无 `workflow` 权限，故配置以 `ci/` 路径随仓库提供，启用命令见 README（尚未在 GitHub 上真实跑过） |
