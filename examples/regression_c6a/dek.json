@@ -1,0 +1,22 @@
+{
+  "project": "regression-c6a-stale-number",
+  "claims": [
+    {
+      "id": "截图字节数（历史错误值）",
+      "kind": "file_size",
+      "source": "screenshot.png",
+      "value": 226315,
+      "note": "这个数字是我 C6A 交付时真的写进 AI 日志的值；盘上真实文件是 523426 字节。DEK 必须判 FAIL。"
+    },
+    {
+      "id": "截图 sha256 前缀",
+      "kind": "sha256_prefix",
+      "source": "screenshot.png",
+      "value": "b3cd3d32766cf149",
+      "length": 16,
+      "note": "同一次核验里必须有一条 PASS，证明工具不是无差别报错。"
+    }
+  ],
+  "deliverables": [],
+  "repro": []
+}
