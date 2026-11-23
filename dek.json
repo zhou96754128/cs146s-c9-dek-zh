@@ -1,0 +1,141 @@
+{
+  "project": "C9-dek-self-audit",
+  "claims": [
+    {
+      "id": "proposal 字节数",
+      "kind": "file_size",
+      "source": "Zhouruoying_C9_proposal.md",
+      "value": 6528,
+      "note": "proposal 里若引用自身大小，必须等于盘上真实字节"
+    },
+    {
+      "id": "proposal sha256 前缀",
+      "kind": "sha256_prefix",
+      "source": "Zhouruoying_C9_proposal.md",
+      "value": "37dc8a8a029cb380",
+      "length": 16
+    },
+    {
+      "id": "proposal 含一句话定义",
+      "kind": "contains",
+      "source": "Zhouruoying_C9_proposal.md",
+      "value": "一句话定义"
+    },
+    {
+      "id": "AI日志 字节数",
+      "kind": "file_size",
+      "source": "Zhouruoying_C9_AI日志.md",
+      "value": 8333
+    },
+    {
+      "id": "AI日志 sha256 前缀",
+      "kind": "sha256_prefix",
+      "source": "Zhouruoying_C9_AI日志.md",
+      "value": "ae3828b26f96a57b",
+      "length": 16
+    },
+    {
+      "id": "AI日志 记录测试数为 45",
+      "kind": "contains",
+      "source": "Zhouruoying_C9_AI日志.md",
+      "value": "45"
+    },
+    {
+      "id": "AAR_W1 字节数",
+      "kind": "file_size",
+      "source": "Zhouruoying_C9_AAR_W1.md",
+      "value": 6688
+    },
+    {
+      "id": "AAR_W1 sha256 前缀",
+      "kind": "sha256_prefix",
+      "source": "Zhouruoying_C9_AAR_W1.md",
+      "value": "33bc77ca05d8c2d5",
+      "length": 16
+    },
+    {
+      "id": "AAR_W1 含动力检查段",
+      "kind": "contains",
+      "source": "Zhouruoying_C9_AAR_W1.md",
+      "value": "动力检查",
+      "note": "挑战 §5.3 明确要求 AAR 含动力评分"
+    },
+    {
+      "id": "AAR_W1 不含占位符",
+      "kind": "not_contains",
+      "source": "Zhouruoying_C9_AAR_W1.md",
+      "value": "TODO"
+    },
+    {
+      "id": "拿来说明 字节数",
+      "kind": "file_size",
+      "source": "Zhouruoying_C9_拿来说明.md",
+      "value": 6450
+    },
+    {
+      "id": "拿来说明 sha256 前缀",
+      "kind": "sha256_prefix",
+      "source": "Zhouruoying_C9_拿来说明.md",
+      "value": "73acf26f487b39c3",
+      "length": 16
+    },
+    {
+      "id": "README 自检数已修正为 45",
+      "kind": "contains",
+      "source": "README.md",
+      "value": "45 项自检",
+      "note": "历史错误值 36 已修正；此处断言修正后的值，防止回退"
+    },
+    {
+      "id": "demo 证据报告字节数",
+      "kind": "file_size",
+      "source": "evidence/demo_report.json",
+      "value": 3172
+    },
+    {
+      "id": "demo 证据报告 sha256 前缀",
+      "kind": "sha256_prefix",
+      "source": "evidence/demo_report.json",
+      "value": "142132e5bfe4b284",
+      "length": 16
+    },
+    {
+      "id": "demo 报告页字节数",
+      "kind": "file_size",
+      "source": "evidence/demo_report.html",
+      "value": 6082
+    },
+    {
+      "id": "demo 报告页不含外部 CDN",
+      "kind": "not_contains",
+      "source": "evidence/demo_report.html",
+      "value": "https://"
+    }
+  ],
+  "deliverables": [
+    { "pattern": "*proposal*", "required": true },
+    { "pattern": "*AAR_W*", "required": true },
+    { "pattern": "*AI日志*", "required": true },
+    { "pattern": "*拿来说明*", "required": false }
+  ],
+  "repro": [
+    {
+      "id": "45 项单元测试",
+      "cmd": "python3 -m unittest discover -s tests",
+      "expect_exit": 0,
+      "note": "全绿才允许发布"
+    },
+    {
+      "id": "demo 正向核验",
+      "cmd": "python3 -m dek verify --root examples/demo --manifest dek.json",
+      "expect_exit": 0,
+      "note": "示例必须 PASS"
+    },
+    {
+      "id": "回归用例负向核验",
+      "cmd": "python3 -m dek verify --root examples/regression_c6a --manifest dek.json",
+      "expect_exit": 1,
+      "note": "故意失败：若此命令返回 0，说明工具在无差别放行，整个工具不可信"
+    }
+  ]
+}
