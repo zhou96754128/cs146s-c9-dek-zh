@@ -1,0 +1,172 @@
+{
+  "root": "/Users/xiaowo/.cogseed-dev/userWorkSpace/检查挑战清单完成情况/C9/Zhouruoying_C9_dek",
+  "count": 33,
+  "bytes": 629115,
+  "items": [
+    {
+      "path": ".gitignore",
+      "bytes": 82,
+      "sha256": "a9985fb748271bc2a9eae9ec08418313778c550ed45be16752b9e5fc53c7c893"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "sha256": "fd9a3ec5cce6d2c438104b39439e75a1f363465dbfe1e2fddb9591d9e2a34c07"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4433,
+      "sha256": "4ab959f8d01d6e7fdb466270694a54a96bce2f3e6a75e52d8ed4560740973c57"
+    },
+    {
+      "path": "Zhouruoying_C9_AAR_W1.md",
+      "bytes": 6688,
+      "sha256": "33bc77ca05d8c2d5cf15f09163250c96992aa89a8926685cd782df77aaebdfe1"
+    },
+    {
+      "path": "Zhouruoying_C9_AI日志.md",
+      "bytes": 8333,
+      "sha256": "ae3828b26f96a57b1b07a0134f4e92589c0e4ea0e333608ce43e25e6f8da4a52"
+    },
+    {
+      "path": "Zhouruoying_C9_mvp.md",
+      "bytes": 2735,
+      "sha256": "4552389bbd0255ef8879755bec3bf36089c3a7ca7cc553b0dfa426df048d990b"
+    },
+    {
+      "path": "Zhouruoying_C9_proposal.md",
+      "bytes": 6528,
+      "sha256": "37dc8a8a029cb3801c68090aae6c7ab7c94db192afd4726d176158aeb427db99"
+    },
+    {
+      "path": "Zhouruoying_C9_拿来说明.md",
+      "bytes": 6450,
+      "sha256": "73acf26f487b39c3b739b29c2f5062c0280ad1c3324fea65eba5cad48346c209"
+    },
+    {
+      "path": "Zhouruoying_C9_项目自评.md",
+      "bytes": 4487,
+      "sha256": "f56b2621c1f995467aefaeda2cb6a8a6fbcd3ea7500ed2928f010c7ebbca0487"
+    },
+    {
+      "path": "dek.json",
+      "bytes": 3856,
+      "sha256": "66d384c9c027edcc8b9bcaac0246e39f0ea3854c6b211d2e6a645bbffdebe7f7"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 628,
+      "sha256": "901de1f735fe431139dbc331b5f1078e9307802ea5cf50d5c2888fda44300785"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 1375,
+      "sha256": "976f9829ffd54431f137249d809264485858c6a327ea68775883ca33d7632dd7"
+    },
+    {
+      "path": "dek/__init__.py",
+      "bytes": 284,
+      "sha256": "79262472df74078397065683d14660bf36a7a9e0304f452a7512ef4e7ec24e77"
+    },
+    {
+      "path": "dek/__main__.py",
+      "bytes": 117,
+      "sha256": "6374488ac01c80ed911b4bf8223407c328f2c9ff47e1a5e1422c4aad0e3c89e0"
+    },
+    {
+      "path": "dek/cli.py",
+      "bytes": 5561,
+      "sha256": "31c173bff1a4549b797565729d3661a2fcd41a2cc7f7b1a7f9259efa6daa48d1"
+    },
+    {
+      "path": "dek/report.py",
+      "bytes": 6852,
+      "sha256": "f174094cfeaf85f70a050a87f715600f565eb59c5a0c1720485217d4d80ce61e"
+    },
+    {
+      "path": "dek/scan.py",
+      "bytes": 2532,
+      "sha256": "2cbc337f580e016fb83dcec25f2c607bf9b10b328250ecc20185906f5e3d630c"
+    },
+    {
+      "path": "dek/verify.py",
+      "bytes": 7379,
+      "sha256": "fa301a9e4120a6dbbdc1f54b8bab7504768982cd90d16d4067ea8566a2e87a61"
+    },
+    {
+      "path": "evidence/demo_report.html",
+      "bytes": 6082,
+      "sha256": "a2c5f99e24628fcc276c6f6e2f412e6807f5038aaa116836941f2fd84004ee88"
+    },
+    {
+      "path": "evidence/demo_report.json",
+      "bytes": 3172,
+      "sha256": "142132e5bfe4b2846f3ec98e2b6b8e803e600bdef11a21d3ab4f2efc881a37b5"
+    },
+    {
+      "path": "evidence/demo_verify.log",
+      "bytes": 632,
+      "sha256": "b63aede54335885e522bd19c979579916e20be863551351ad721b07ae7865129"
+    },
+    {
+      "path": "evidence/inventory.json",
+      "bytes": 5175,
+      "sha256": "5df34dfb638ea651428e9b7fb1f6f56813b3dea03c3a4657cc55abb006045c16"
+    },
+    {
+      "path": "evidence/inventory.log",
+      "bytes": 57,
+      "sha256": "1950dc79208babd048640e1ad6db19506d5b1bfbc87eeb83bdd062d659308ede"
+    },
+    {
+      "path": "evidence/regression_verify.log",
+      "bytes": 159,
+      "sha256": "46c94235e1f4ee446267f36c02095d8c08c45db02e3cea7d3ceb246c382d8540"
+    },
+    {
+      "path": "examples/demo/Zhouruoying_demo_AI日志.md",
+      "bytes": 635,
+      "sha256": "ad36f690b5d99739e0286a90ecf15177254a6eaea0617ead22fe1d144a47b3c8"
+    },
+    {
+      "path": "examples/demo/Zhouruoying_demo_proposal.md",
+      "bytes": 573,
+      "sha256": "f7a5df2375fbd2b9289804b24eb5b8fcc40a3909f3e62a9138cab6d5a9026705"
+    },
+    {
+      "path": "examples/demo/dek.json",
+      "bytes": 1820,
+      "sha256": "527779edcc2c704ea1bf0bb7262c0b9b15fcac0ac0a6ac681a697d0718e7876f"
+    },
+    {
+      "path": "examples/demo/summary.json",
+      "bytes": 290,
+      "sha256": "da3bdd6e5eff58df57926e8972f67398540d5d495c7f17a2ab8b1d8d55e96cb7"
+    },
+    {
+      "path": "examples/regression_c6a/README.md",
+      "bytes": 1696,
+      "sha256": "3749aa425b0fcf2d0e31213253b981dbd3d94836cdce60ae5ac5cac7eeca818b"
+    },
+    {
+      "path": "examples/regression_c6a/dek.json",
+      "bytes": 653,
+      "sha256": "79498f8ef78c95305ec2ed238780bd212eb1157ac77c3c64ea40bc715aa1c42f"
+    },
+    {
+      "path": "examples/regression_c6a/screenshot.png",
+      "bytes": 523426,
+      "sha256": "b3cd3d32766cf1493370d3e43b753ad5d9201589554c3d5430709adf09d0ba0f"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "bytes": 5206,
+      "sha256": "8066184b2c840a0b6523d296bab66850cf997a4d6e3f3c04c45f65bbbb5b68b8"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 10150,
+      "sha256": "6d8addda5df461fa27bc182f5e486f69b2f30a27389fd5c6c3170f605c60f8db"
+    }
+  ]
+}
