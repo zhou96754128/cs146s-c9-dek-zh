@@ -1,0 +1,16 @@
+PASS claim  报告条目数
+PASS claim  通过率
+PASS claim  proposal 字节数
+PASS claim  summary 字节数
+PASS claim  proposal 含一句话定义
+PASS claim  proposal 不含占位符
+PASS claim  AI日志行数
+PASS deliv  *proposal*      Zhouruoying_demo_proposal.md
+PASS deliv  *AI日志*          Zhouruoying_demo_AI日志.md
+PASS deliv  *demo*          Zhouruoying_demo_AI日志.md,Zhouruoying_demo_proposal.md
+PASS repro  示例自检            exit=0
+PASS repro  示例负向验证          exit=3
+
+VERDICT=PASS  total=12  pass=12  fail=0  skip=0
+已写出: evidence/demo_report.json
+已写出: evidence/demo_report.html
